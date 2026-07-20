@@ -1,0 +1,8 @@
+/execute in minecraft:the_end run tp ~ ~ ~
+/attribute Player535 minecraft:generic.flying_speed modifier add 999
+/execute in minecraft:the_end run tp ~ ~ ~
+/execute in minecraft:the_end run tp ~ ~ ~1000
+/locate structure minecraft:end_city
+/execute in minecraft:the_end run tp ~ ~ ~
+/locate structure minecraft:end_city
+/tp @s 384 ~ 1376

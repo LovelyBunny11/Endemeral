@@ -18,7 +18,7 @@ public class EndemeralNoiseRouterData {
         DensityFunction densityfunction5 = getFunction(densityFunctions, SHIFT_Z);
         DensityFunction densityfunction6 = DensityFunctions.shiftedNoise2d(densityfunction4, densityfunction5, 0.25F, noiseParameters.getOrThrow(Noises.TEMPERATURE));
         DensityFunction densityfunction7 = DensityFunctions.shiftedNoise2d(densityfunction4, densityfunction5, 0.25F, noiseParameters.getOrThrow(Noises.VEGETATION));
-        return new NoiseRouter(DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), densityfunction6, densityfunction7, DensityFunctions.zero(), densityfunction, DensityFunctions.zero(), DensityFunctions.zero(), slideEnd(DensityFunctions.add(densityfunction, DensityFunctions.constant(-0.703125F))), densityfunction1, DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero());
+        return new NoiseRouter(DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), densityfunction6, densityfunction7, getFunction(densityFunctions, CONTINENTS), densityfunction, getFunction(densityFunctions, DEPTH), DensityFunctions.zero(), slideEnd(DensityFunctions.add(densityfunction, DensityFunctions.constant(-0.703125F))), densityfunction1, DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero());
     }
 
     private static DensityFunction postProcess(DensityFunction densityFunction) {

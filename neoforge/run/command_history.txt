@@ -1,5 +1,0 @@
-/execute in minecraft:the_end run tp ~ ~ ~
-/tp @n[type=minecraft:ender_dragon]
-/execute in minecraft:the_end run tp ~ ~ ~
-/tp @n[type=minecraft:ender_dragon]
-/execute in minecraft:the_end run tp ~ ~ ~10000

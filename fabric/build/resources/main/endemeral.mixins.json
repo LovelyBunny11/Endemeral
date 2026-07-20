@@ -6,8 +6,8 @@
   "compatibilityLevel": "JAVA_18",
   "mixins": [
     "MinecraftServerMixin",
-    "MultiNoiseBiomeSourceAccessor",
-    "NoiseGeneratorSettingsMixin"
+    "MultiNoiseBiomeSourceParameterListPresetMixin",
+    "WorldDimensionsMixin"
   ],
   "client": [],
   "server": [],
@@ -15,4 +15,3 @@
     "defaultRequire": 1
   }
 }
-

@@ -1,6 +1,7 @@
 package com.cosmocat.endemeral.mixin;
 
 import com.cosmocat.endemeral.worldgen.EndemeralBiomeSource;
+import com.cosmocat.endemeral.worldgen.EndemeralMultiNoiseBiomeSourceParameterLists;
 import com.cosmocat.endemeral.worldgen.EndemeralNoiseGeneratorSettings;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.server.MinecraftServer;
@@ -25,9 +26,8 @@ public abstract class MinecraftServerMixin {
                 dimensionOptions.type().unwrapKey().orElse(null))) {
             ChunkGenerator defaultChunkGen = dimensionOptions.generator();
             BiomeSource defaultBiomes = defaultChunkGen.getBiomeSource();
-            if (defaultBiomes instanceof TheEndBiomeSource theEndBiomeSource
-                    && defaultChunkGen instanceof NoiseBasedChunkGenerator noiseChunkGen) {
-                EndemeralBiomeSource biomeSource = EndemeralBiomeSource.create(server.registryAccess().lookupOrThrow(Registries.MULTI_NOISE_BIOME_SOURCE_PARAMETER_LIST).getOrThrow(MultiNoiseBiomeSourceParameterLists.OVERWORLD), theEndBiomeSource);
+            if (defaultBiomes instanceof TheEndBiomeSource theEndBiomeSource) {
+                EndemeralBiomeSource biomeSource = EndemeralBiomeSource.create(server.registryAccess().lookupOrThrow(Registries.MULTI_NOISE_BIOME_SOURCE_PARAMETER_LIST).getOrThrow(EndemeralMultiNoiseBiomeSourceParameterLists.END), theEndBiomeSource);
                 args.set(5, new LevelStem(
                         dimensionOptions.type(),
                         new NoiseBasedChunkGenerator(biomeSource, server.registryAccess().lookupOrThrow(Registries.NOISE_SETTINGS).getOrThrow(EndemeralNoiseGeneratorSettings.END))
