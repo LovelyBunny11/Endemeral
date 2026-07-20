@@ -1,0 +1,32 @@
+{
+    "schemaVersion": 1,
+    "id": "endemeral",
+    "version": "1.0.0",
+    "name": "Endemeral",
+    "description": "",
+    "authors": [
+        "_LovelyBunny, Cucuber_321"
+    ],
+    "contact": {},
+    "license": "CC0-1.0",
+    "icon": "endemeral.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.cosmocat.endemeral.EndemeralFabric"
+        ]
+    },
+    "mixins": [
+        "endemeral.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.16.9",
+        "fabric-api": "*",
+        "minecraft": "1.21.1",
+        "java": ">=21"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
+}
+  
